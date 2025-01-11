@@ -10,8 +10,8 @@ class User(AbstractUser):
 
 
 class Customer(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    birth = models.DateField()
+   user = models.OneToOneField(User, on_delete=models.CASCADE)
+   birth = models.DateField(null=True, blank=True)
 
 
 class Company(models.Model):
